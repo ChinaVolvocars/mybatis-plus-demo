@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.SysLogMapper">
+
+  <resultMap id="BaseResultMap" type="com.example.demo.domain.SysLog">
+    <id property="id" column="id" jdbcType="VARCHAR"/>
+    <result property="logType" column="log_type" jdbcType="INTEGER"/>
+    <result property="logContent" column="log_content" jdbcType="VARCHAR"/>
+    <result property="operateType" column="operate_type" jdbcType="INTEGER"/>
+    <result property="userid" column="userid" jdbcType="VARCHAR"/>
+    <result property="username" column="username" jdbcType="VARCHAR"/>
+    <result property="ip" column="ip" jdbcType="VARCHAR"/>
+    <result property="method" column="method" jdbcType="VARCHAR"/>
+    <result property="requestUrl" column="request_url" jdbcType="VARCHAR"/>
+    <result property="requestParam" column="request_param" jdbcType="VARCHAR"/>
+    <result property="requestType" column="request_type" jdbcType="VARCHAR"/>
+    <result property="costTime" column="cost_time" jdbcType="BIGINT"/>
+    <result property="createBy" column="create_by" jdbcType="VARCHAR"/>
+    <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    <result property="updateBy" column="update_by" jdbcType="VARCHAR"/>
+    <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id
+    ,log_type,log_content,
+        operate_type,userid,username,
+        ip,method,request_url,
+        request_param,request_type,cost_time,
+        create_by,create_time,update_by,
+        update_time
+  </sql>
+</mapper>
